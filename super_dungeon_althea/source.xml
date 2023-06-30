@@ -22,7 +22,6 @@
             <set name="third-party">false</set>
             <set name="homebrew">true</set>
             <set name="league">false</set>
-            <set name="release"></set>
         </setters>
     </element>
     
