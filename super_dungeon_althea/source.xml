@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
     <info>
-        <name>Althea Source</name>
+        <name>ALTHEA Source</name>
         <update version="0.0.1">
             <file name="source.xml" url="URL HERE" />
         </update>
     </info>
     
-    <element name="Althea" type="Source" source="Althea" id="ID_ALTHEA_SOURCE">
+    <element name="Super Dungeon 2023 Althea" type="Source" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_SOURCE_SUPER_DUNGEON">
         <description>
             <![CDATA[<p>Super Dungeon 2023 Althea Setting</p>]]>
         </description>
         <setters>
-            <set name="abbreviation"></set>
+            <set name="abbreviation">ALTHEA</set>
             <set name="url">https://drive.google.com/file/d/1yJHI2p4kiBp1_NsY2Gx8o6HWBxGavyCi/view</set>
             <set name="image"></set>
             <set name="author">Blue</set>
