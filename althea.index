@@ -12,6 +12,7 @@
         
       <!-- Miscellaneous -->
         <file name="source.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/source.xml" />
+        <file name="languages.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/languages.xml" />
         
     </files>
 </index>
