@@ -2,7 +2,7 @@
 <index>
     <info>
         <name>Super Dungeon 2023 Althea</name>
-        <update version="0.0.2">
+        <update version="0.0.1">
             <file name="althea.index" url="https://raw.githubusercontent.com/nastjiya/althea/main/althea.index" />
         </update>
     </info>
