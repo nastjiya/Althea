@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Althea Source</name>
+        <update version="0.0.1">
+            <file name="source.xml" url="URL HERE" />
+        </update>
+    </info>
+    
+    <element name="Althea" type="Source" source="Althea" id="ID_ALTHEA_SOURCE">
+        <description>
+            <![CDATA[<p>Super Dungeon 2023 Althea Setting</p>]]>
+        </description>
+        <setters>
+            <set name="abbreviation"></set>
+            <set name="url">https://drive.google.com/file/d/1yJHI2p4kiBp1_NsY2Gx8o6HWBxGavyCi/view</set>
+            <set name="image"></set>
+            <set name="author">Blue</set>
+            <set name="official">false</set>
+            <set name="supplement">false</set>
+            <set name="playtest">false</set>
+            <set name="third-party">false</set>
+            <set name="homebrew">true</set>
+            <set name="league">false</set>
+            <set name="release"></set>
+        </setters>
+    </element>
+    
+</elements>
