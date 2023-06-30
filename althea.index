@@ -3,15 +3,15 @@
     <info>
         <name>Super Dungeon 2023 Althea</name>
         <update version="0.0.2">
-            <file name="althea.index" url="URL HERE" />
+            <file name="althea.index" url="https://raw.githubusercontent.com/nastjiya/althea/main/althea.index" />
         </update>
     </info>
     <files>
       <!-- Races -->
-        <file name="race-duergar.xml" url="URL HERE" />
+        <file name="race-duergar.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/race-duergar.xml" />
         
       <!-- Miscellaneous -->
-        <file name="source.xml" url="https://raw.githubusercontent.com/community-elements/elements-reddit/master/reddit/reddit-unearthed-arcana/all-the-lights-in-the-sky-are-stars/source.xml" />
+        <file name="source.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/source.xml" />
         
     </files>
 </index>
