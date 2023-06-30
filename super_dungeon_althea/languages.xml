@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Languages</name>
+		<update version="0.0.1">
+			<file name="languages.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/languages.xml" />
+		</update>
+	</info>
+
+	<element name="Duergar" type="Language" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_LANGUAGE_DUERGAR">
+		<supports>Standard</supports>
+		<description>
+			<p>Typically spoken by duergar.</p>
+		</description>
+		<setters>
+			<set name="standard">true</set>
+			<set name="speakers">Duergar</set>
+			<set name="script">Dwarvish</set>
+		</setters>
+	</element>
+</elements>

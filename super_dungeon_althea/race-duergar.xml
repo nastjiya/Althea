@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Duergar</name>
+        <update version="0.0.1">
+            <file name="race-duergar.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/race-duergar.xml" />
+        </update>
+    </info>
+    
+    <element name="Duergar" type="Race" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACE_DUERGAR">
+        <description>
+            <h4>CULTURE</h4>
+            <p>The duergar are builders of monuments and inventors of grand machinery. When the exodus into the underdark began the duergar were ready, lending ax, shovel, and pick to dig the great subterranean pathways from the surface to their underground siblings. Unfortunately the constant backbreaking exposure to the worst of the mold has had a lasting effect on the duergar, resulting in psychic spores infesting millions of their number. Those that survived have developed certain psionic defenses against further attacks.</p>
+            <h4>FAVORED BACKGROUNDS</h4>
+            <p>Duergar craftsmanship is in perennial demand, leading many of their ranks to become Guild Artisans. More vindictive Duergar put their physical hardiness to work on Althea’s surface as Guild Hounds to fight the mold.</p>
+            <h4>DUERGAR NAMES</h4>
+            <p>Aelwig, Cwengeld, Guthilda, Trumlac, Veagar.</p>
+            <p>Duergar take their surnames from a parent, usually the more well known one.</p>
+            <p><i>Examples:</i> Of-Wereheath, Of-Milgifu, Of-Ranharth</p>
+            <h4>DUERGAR TRAITS</h4>
+            <p>
+                <span class="feature">Ability Score Increase.</span> One score of your choice increases by 2, and another by 1.<br />
+                <span class="feature">Age.</span> Duergar attain adulthood at around 50 years and can live up to 350 years.<br />
+                <span class="feature">Darkvision.</span> You can see in dim light within 120 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.<br />
+                <span class="feature">Duergar Magic.</span> Starting at 3rd level, you can cast the Enlarge/Reduce spell with this trait, without requiring a material component. Starting at 5th level, you can also cast the Invisibility spell with it, without requiring a material component. Once you cast either of these spells with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait.<br />
+                <span class="feature">Dwarven Resilience.</span> You have advantage on saving throws you make to avoid or end the poisoned condition on yourself. You also have resistance to poison damage.<br />
+                <span class="feature">Size.</span> Duergar are usually short and stocky, standing 4-5 feet tall and weighing 120-170 pounds. Your size is Medium.<br />
+                <span class="feature">Speed.</span> Your base walking speed is 30 feet.<br />
+                <span class="feature">Languages.</span> You can speak, read, and write Common, Duergar, and Undercommon.<br />
+                <span class="feature">Psionic Fortitude.</span> You have advantage on saving throws you make to avoid or end the charmed or stunned condition on yourself.<br />
+            </p>
+        </description>
+        <setters>
+            <set name="height" modifier="2d6">4’</set>
+            <set name="weight" modifier="5d10">120 lb.</set>
+            <set name="names" type="male">Aelwig, Cwengeld, Guthilda, Trumlac, Veagar</set>
+            <set name="names" type="clan">Aelwig, Cwengeld, Guthilda, Trumlac, Veagar</set>
+            <set name="names-format">{{custom}}</set>
+        </setters>
+        <sheet display="false">
+            <description>description</description>
+        </sheet>
+        <rules>
+            <select type="Racial Trait" name="First Ability Score Increase (Duergar)" supports="Duergar" number="1" />
+            <select type="Racial Trait" name="Second Ability Score Increase (Duergar)" supports="Duergar" number="1" />
+            <stat name="innate speed" value="30" bonus="base"/>
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" />
+            <grant type="Language" id="ID_BLUE_ALTHEA_LANGUAGE_DUERGAR" />
+            <grant type="Language" id="ID_LANGUAGE_UNDERCOMMON" />
+            <grant type="Racial Trait" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_MAGIC" />
+            <grant type="Racial Trait" id="ID_RACIAL_TRAIT_DWARVEN_RESILIENCE" />
+            <grant type="Racial Trait" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_STARFORGED_PSIONIC_FORTITUDE" />
+        </rules>
+    </element>
+    <element name="Duergar Magic" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_MAGIC">
+        <requirements>[level:3]</requirements>
+        <description>
+            <p>Starting at 3rd level, you can cast the Enlarge/Reduce spell with this trait, without requiring a material component. Starting at 5th level, you can also cast the Invisibility spell with it, without requiring a material component. Once you cast either of these spells with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait.</p>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>You can cast enlarge/reduce on yourself. (Spellcasting: Intelligence, Wisdom, or Charisma)</description>
+            <description level="5">You can cast enlarge/reduce and invisibility on yourself. (Spellcasting: Intelligence, Wisdom, or Charisma)</description>
+        </sheet>
+        <rules>
+            <!-- <stat name="duergar magic:spellcasting:ability" value="Intelligence" /> -->
+            <grant type="Spell" id="ID_PHB_SPELL_ENLARGE_REDUCE" level="3" />
+            <grant type="Spell" id="ID_PHB_SPELL_INVISIBILITY" level="5" />
+        </rules>
+    </element>
+    <element name="Psionic Fortitude" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_STARFORGED_PSIONIC_FORTITUDE">
+        <description>
+            <p>You have advantage on saving throws you make to avoid or end the charmed or stunned condition on yourself.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws you make to avoid or end the charmed or stunned condition on yourself.</description>
+        </sheet>
+    </element>
+
+    <element name="First Ability Score Increase (Strength)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_STRENGTH_2">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Strength increases by 2.</p>
+        </description>
+        <rules>
+            <stat name="strength" value="2"/>
+        </rules>
+    </element>
+
+    <element name="First Ability Score Increase (Dexterity)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_DEXTERITY_2">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Dexterity increases by 2.</p>
+        </description>
+        <rules>
+            <stat name="dexterity" value="2"/>
+        </rules>
+    </element>
+
+    <element name="First Ability Score Increase (Constitution)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_CONSTITUTION_2">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Constitution increases by 2.</p>
+        </description>
+        <rules>
+            <stat name="constitution" value="2"/>
+        </rules>
+    </element>
+
+    <element name="First Ability Score Increase (Intelligence)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_INTELLIGENCE_2">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Intelligence increases by 2.</p>
+        </description>
+        <rules>
+            <stat name="intelligence" value="2"/>
+        </rules>
+    </element>
+
+    <element name="First Ability Score Increase (Wisdom)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_WISDOM_2">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Wisdom increases by 2.</p>
+        </description>
+        <rules>
+            <stat name="wisdom" value="2"/>
+        </rules>
+    </element>
+
+    <element name="First Ability Score Increase (Charisma)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_CHARISMA_2">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Charisma increases by 2.</p>
+        </description>
+        <rules>
+            <stat name="charisma" value="2"/>
+        </rules>
+    </element>
+
+    <!-- second ability score increase -->
+
+    <element name="Second Ability Score Increase (Strength)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_STRENGTH_1">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Strength increases by 1.</p>
+        </description>
+        <rules>
+            <stat name="strength" value="1"/>
+        </rules>
+    </element>
+
+    <element name="Second Ability Score Increase (Dexterity)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_DEXTERITY_1">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Dexterity increases by 1.</p>
+        </description>
+        <rules>
+            <stat name="dexterity" value="1"/>
+        </rules>
+    </element>
+
+    <element name="Second Ability Score Increase (Constitution)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_CONSTITUTION_1">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Constitution increases by 1.</p>
+        </description>
+        <rules>
+            <stat name="constitution" value="1"/>
+        </rules>
+    </element>
+
+    <element name="Second Ability Score Increase (Intelligence)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_INTELLIGENCE_1">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Intelligence increases by 1.</p>
+        </description>
+        <rules>
+            <stat name="intelligence" value="1"/>
+        </rules>
+    </element>
+
+    <element name="Second Ability Score Increase (Wisdom)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_WISDOM_1">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Wisdom increases by 1.</p>
+        </description>
+        <rules>
+            <stat name="wisdom" value="1"/>
+        </rules>
+    </element>
+
+    <element name="Second Ability Score Increase (Charisma)" type="Racial Trait" source="Super Dungeon 2023 Althea" id="ID_BLUE_ALTHEA_RACIAL_TRAIT_DUERGAR_CHARISMA_1">
+        <supports>Duergar</supports>
+        <requirements />
+        <description>
+            <p>Your Charisma increases by 1.</p>
+        </description>
+        <rules>
+            <stat name="charisma" value="1"/>
+        </rules>
+    </element>
+
+
+</elements>
