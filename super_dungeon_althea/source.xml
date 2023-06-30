@@ -3,7 +3,7 @@
     <info>
         <name>ALTHEA Source</name>
         <update version="0.0.1">
-            <file name="source.xml" url="URL HERE" />
+            <file name="source.xml" url="https://raw.githubusercontent.com/nastjiya/althea/main/super_dungeon_althea/source.xml" />
         </update>
     </info>
     
